@@ -86,7 +86,7 @@ CLASS="TOC"
 ><DT
 ><A
 HREF="c429.html#AEN431"
->Does findlib support the autolink feature of O'Caml 3?</A
+>Does findlib support the autolink feature of OCaml 3?</A
 ></DT
 ><DT
 ><A
@@ -128,7 +128,7 @@ CLASS="SECT1"
 CLASS="SECT1"
 ><A
 NAME="AEN431"
->Does findlib support the autolink feature of O'Caml 3?</A
+>Does findlib support the autolink feature of OCaml 3?</A
 ></H1
 ><P
 ><SPAN
@@ -139,7 +139,7 @@ CLASS="EMPHASIS"
 ></SPAN
 > Findlib is compatible with autolink</P
 ><P
->The new archive format introduced with O'Caml 3 can store the linker options
+>The new archive format introduced with OCaml 3 can store the linker options
 that are necessary to link an archive. For example:
 
 <PRE
@@ -167,7 +167,7 @@ we do not need to tell the compiler the options. We could simply leave all
 because findlib should keep the compatibility with older software, and because
 "linkopts" is more powerful (you can have conditional linker options).</P
 ><P
->If you have software that must run in both O'Caml 2 and O'Caml 3 environments,
+>If you have software that must run in both OCaml 2 and OCaml 3 environments,
 you can make your "linkopts" attribute dependent on the "autolink"
 predicate. For example:
 
@@ -177,9 +177,9 @@ CLASS="PROGRAMLISTING"
 linkopts(autolink) = ""</PRE
 >
 
-The findlib installation for O'Caml 3 will take the second line which is
+The findlib installation for OCaml 3 will take the second line which is
 reasonable because ocamlc already knows how to link; the installation for
-O'Caml 2 never sets the "autolink" predicate and therefore uses the first line.</P
+OCaml 2 never sets the "autolink" predicate and therefore uses the first line.</P
 ></DIV
 ></DIV
 ><DIV

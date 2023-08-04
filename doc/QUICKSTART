@@ -13,7 +13,7 @@ See the file INSTALL for instructions how to build and install findlib.
 Findlib and the toploop
 ==============================================================================
 
-For a number of platforms, O'Caml can load bytecode-compiled libraries 
+For a number of platforms, OCaml can load bytecode-compiled libraries 
 dynamically. For these platforms, findlib is very simple to use as explained in 
 the following. For other platforms, see the paragraph below about "custom 
 toploops".
@@ -85,7 +85,7 @@ for the revised syntax. (But you cannot switch between the syntaxes.)
 Custom Toploops
 ==============================================================================
 
-For some platforms, O'Caml does not implement loading external libraries (e.g. 
+For some platforms, OCaml does not implement loading external libraries (e.g. 
 Cygwin). One has to create a so-called custom toploop that statically links 
 with these libraries. Example: 
 
@@ -135,7 +135,7 @@ exec ocaml "$0" "$@"
 open Cgi;;
 ...
 
-This works wherever O'Caml is installed.
+This works wherever OCaml is installed.
 
 ==============================================================================
 Compiling programs
@@ -218,10 +218,10 @@ Makefile is written.
 There is no magic!
 ==============================================================================
 
-Findlib is neither a patch of O'Caml nor uses it internal features of the 
-O'Caml programming environment. It is only a convention to install software 
-components in filesystem hierarchies, a library interpreting this convention, 
-and some frontend applications making the library useable for you.
+Findlib is neither a patch of OCaml nor uses it internal features of the OCaml 
+programming environment. It is only a convention to install software components 
+in filesystem hierarchies, a library interpreting this convention, and some 
+frontend applications making the library useable for you.
 
 One important consequence is that you can only refer to those software 
 components that have previously been installed in a way findlib understands. 

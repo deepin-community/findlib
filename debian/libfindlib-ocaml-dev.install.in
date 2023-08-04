@@ -1,8 +1,8 @@
 @OCamlStdlibDir@/topfind
-@OCamlStdlibDir@/findlib/Makefile.config
+@OCamlStdlibDir@/findlib/Makefile.*
 @OCamlStdlibDir@/findlib/findlib_top.cma
 DYN: @OCamlStdlibDir@/findlib/findlib_top.cmxs
 @OCamlStdlibDir@/findlib/*.cmi
-@OCamlStdlibDir@/findlib/*.mli
+@OCamlStdlibDir@/findlib/*.ml*
 OPT: @OCamlStdlibDir@/findlib/*.a
 OPT: @OCamlStdlibDir@/findlib/*.cmxa

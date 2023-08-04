@@ -1,3 +1,23 @@
+findlib (1.9.6-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Mon, 23 Jan 2023 11:00:21 +0100
+
+findlib (1.9.3-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Wed, 02 Mar 2022 07:41:34 +0100
+
+findlib (1.9.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.6.0
+  * Bump debian/watch version to 4
+
+ -- Stéphane Glondu <glondu@debian.org>  Wed, 15 Dec 2021 08:15:55 +0100
+
 findlib (1.8.1-2) unstable; urgency=medium
 
   * Cope with OCaml 4.11.1 not installing graphics any more

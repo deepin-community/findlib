@@ -9,12 +9,10 @@ Uploaders:
 Build-Depends:
  debhelper-compat (= 13),
  bash-completion,
- ocaml-nox (>= 4.11.1),
  ocaml,
- m4,
  gawk | awk,
  dh-ocaml
-Standards-Version: 4.5.0
+Standards-Version: 4.6.0
 Rules-Requires-Root: no
 Vcs-Git: https://salsa.debian.org/ocaml-team/findlib.git
 Vcs-Browser: https://salsa.debian.org/ocaml-team/findlib
