@@ -604,7 +604,7 @@ MOREINFO="NONE"
 ><TERM
 >camlp4o</TERM><LISTITEM
 ><PARA
->This is the reserved predicate for the standard O'Caml syntax.
+>This is the reserved predicate for the standard OCaml syntax.
   It can be used in the <LITERAL
 MOREINFO="NONE"
 >-syntax</LITERAL> predicate list.
@@ -612,7 +612,7 @@ MOREINFO="NONE"
 ><TERM
 >camlp4r</TERM><LISTITEM
 ><PARA
->This is the reserved predicate for the revised O'Caml syntax.
+>This is the reserved predicate for the revised OCaml syntax.
   It can be used in the <LITERAL
 MOREINFO="NONE"
 >-syntax</LITERAL> predicate list.
@@ -655,7 +655,7 @@ MOREINFO="NONE"
 "archive" property of packages.</PARA></REFSECT2><REFSECT2
 ><TITLE
 >How to set the names of the compiler executables</TITLE><PARA
-> Normally, the O'Caml bytecode compiler can be called under the name
+> Normally, the OCaml bytecode compiler can be called under the name
 <LITERAL
 MOREINFO="NONE"
 >ocamlc</LITERAL>. However, this is not always true; sometimes a
@@ -754,7 +754,7 @@ FORMAT="LINESPECIFIC"
 >This command is a driver for the tool <LITERAL
 MOREINFO="NONE"
 >ocamldep</LITERAL> of the
-O'Caml distribution. This driver is only useful in conjunction with
+OCaml distribution. This driver is only useful in conjunction with
 the preprocessor camlp4; otherwise it does not provide more functions
 than <LITERAL
 MOREINFO="NONE"
@@ -1589,7 +1589,7 @@ MOREINFO="NONE"
 >OCAMLFIND_CONF</LITERAL>.
     </PARA></LISTITEM><LISTITEM
 ><PARA
->    Whether the installed O'Caml version supports autolinking or not.
+>    Whether the installed OCaml version supports autolinking or not.
     </PARA></LISTITEM></ITEMIZEDLIST>
   </PARA></LISTITEM></VARLISTENTRY><VARLISTENTRY
 ><TERM
@@ -1772,7 +1772,7 @@ MOREINFO="NONE"
 >stdlib</LITERAL></TERM><LISTITEM
 ><PARA
 >    This variable determines the location of the standard library. This must
-    be the same directory for which the O'Caml compilers are configured.
+    be the same directory for which the OCaml compilers are configured.
   </PARA><PARA
 >    This variable is optional. It is not recommend to set this variable
     unless you know what you are doing!
@@ -1786,14 +1786,14 @@ MOREINFO="NONE"
 >ldconf</LITERAL></TERM><LISTITEM
 ><PARA
 >    This variable determines the location of the ld.conf file. This must
-    be the same file the O'Caml compilers read in; it is updated by 
+    be the same file the OCaml compilers read in; it is updated by 
     ocamlfind when installing and removing packages. You can set this
     variable to the special value "<LITERAL
 MOREINFO="NONE"
 >ignore</LITERAL>" to disable
     the automatic modification of the ld.conf file.
   </PARA><PARA
->    If not set, the ld.conf file is assumed to reside in the O'Caml
+>    If not set, the ld.conf file is assumed to reside in the OCaml
     standard library directory.
   </PARA><PARA
 >    This variable is optional. It is not recommended to set this variable

@@ -18,6 +18,7 @@ override_dh_auto_configure:
 		-mandir /usr/share/man \
 		-no-camlp4 \
 		-with-toolbox
+	sed -i '/INSTALLFILE/s/.*/INSTALLFILE = cp/' Makefile.config
 
 .PHONY: override_dh_auto_build
 override_dh_auto_build:

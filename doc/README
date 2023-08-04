@@ -22,7 +22,7 @@ various OCaml compilers that can directly deal with packages.
 
 It is important to understand that findlib is not a general-purpose package 
 manager (like rpm for Linux), and does not support the management of arbitrary 
-files, but only O'Caml libraries. However, there are lots of special functions 
+files, but only OCaml libraries. However, there are lots of special functions 
 for libraries. findlib is more comparable with Gnome's pkg-config and Perl's 
 MakeMaker, but of course there are language-specific differences.
 
@@ -85,6 +85,36 @@ of questions.
 List of Changes
 ==============================================================================
 
+-  1.9.6:: Support for OCaml-5 (as far as foreseeable)  (David Allsopp).
+   Again buildable since OCaml-3.08 (David Allsopp).
+   Fix an install problem when building with a system-provided  OCaml compiler 
+   (Louis Gesbert).
+   
+-  1.9.5:: fixes a bug in the scripting that  slipped into 1.9.4
+   
+-  1.9.4: Also finds the libraries str.cm(x)a, unix.cm(x)a,  and dynlink.cm(x)a 
+   in subdirectories of the OCaml standard library,  as needed for OCaml-4.14 
+   (David Allsopp).
+   Support for runtime_events (Patrick Ferris)
+   Fix spelling of "OCaml" everywhere (Marek Kubica)
+   Work around the deprecation of a POSIX shell feature  (Issam Maghni)
+   Support DESTDIR, and favor the "install" command for installation  (Gerd 
+   Stolpmann on suggestion of Thomas Klausner)
+   
+-  1.9.3: Fixes another build problem regarding OCaml-5.00
+   
+-  1.9.2: Fixes a build problem regarding OCaml-5.00
+   
+-  1.9.1: Fixes a few install-related issues, like missing files.
+   
+-  1.9: Overhaul how separately installed packages (e.g. num)  are handled (by 
+   David Allsopp).
+   Switch to opam-2.0 file format (by David Allsopp).
+   Fix an incomaptibility with ocaml-4.13 (by David Allsopp).
+   Expose the native toplevel (by Louis Gesbert).
+   Fix an incompatibility with "Jane Street Style" (by Mark Laws).
+   Switch from m4 to sed (by kit-ty-kate).
+   
 -  1.8.1: Adapted to upcoming ocaml-4.09.
    New API Findlib.list_packages' can specify a package prefix.
    
@@ -237,11 +267,11 @@ List of Changes
    Support for Win64 (untested; thanks to David Allsopp).
    ocamlfind no longer emits auto-generated -ccopt options. These  tend to 
    accumulate, and it is possible that for large projects  the maximum command 
-   line length is exceeded. Current versions of  the O'Caml compilers do not 
+   line length is exceeded. Current versions of  the OCaml compilers do not 
    need these extra -ccopt anyway, so  this code is completely dropped.
    
 -  1.2.4: Fix: Bigarray needs unix (Thanks to Markus Mottl).
-   Fix: In the version of camlp4 provided by O'Caml 3.11 various  libraries do 
+   Fix: In the version of camlp4 provided by OCaml 3.11 various  libraries do 
    not contain dynlink anymore. Because of this, dynlink  becomes a 
    prerequisite of camlp4. (Thanks to Martin Jambon).
    Attempt: Fixing the space issue for paths (Win32). It is unclear  whether it 
@@ -263,7 +293,7 @@ List of Changes
    A script to create a MacOS X package (thanks to Pietro Abate)
    Better support for Windows (with help from Robert Roessler and David 
    Allsopp)
-   Support for camlp4 on O'Caml 3.10
+   Support for camlp4 on OCaml 3.10
    Fix: "ocamlfind install" with "-patch" option writes now correct META file 
    for the case that subpackages occur
    Adding environment variable OCAMLFIND_IGNORE_DUPS_IN to reduce the number of 
@@ -274,7 +304,7 @@ List of Changes
    Fixes for platforms that do not support dynamic loading of DLLs.
    Fixed extraction of camlp4 parameters from packages.
    
--  1.1.1: Bugfixes only: Fixed detection of threading model for O'Caml 3.09. 
+-  1.1.1: Bugfixes only: Fixed detection of threading model for OCaml 3.09. 
    Fixed alternate configuration files.
    
 -  1.1: Automatic detection of standard compiler options.
@@ -349,12 +379,12 @@ List of Changes
    predicates into account (it did not do that in previous versions of 
    findlib).
    
--  0.9: Changes for O'Caml 3.07 (-thread,  -vmthread). Includes Zack's toploop 
+-  0.9: Changes for OCaml 3.07 (-thread,  -vmthread). Includes Zack's toploop 
    printers for bigints.
    
--  0.8 - 0.8.1: Renamed a lot of modules to avoid name  clashes with O'Caml 
-   core modules. Cygwin: Additional option  -cygpath for "configure". The man 
-   pages have a NAME  section. Bugfix in Makefile wizard.
+-  0.8 - 0.8.1: Renamed a lot of modules to avoid name  clashes with OCaml core 
+   modules. Cygwin: Additional option  -cygpath for "configure". The man pages 
+   have a NAME  section. Bugfix in Makefile wizard.
    
 -  0.7 - 0.7.2: DLLs: There are now two styles of  installation: DLLs can be 
    installed in the package  directories (like before), or in a shared 
@@ -382,7 +412,7 @@ List of Changes
    configuration. #use "findlib" and #use "ocamlfind"  are still supported for 
    backward compatibility if the name clash  does not occur.
    Fix: bytecode threads work again. (The wrong unix library was  linked for 
-   recent O'Caml versions.)
+   recent OCaml versions.)
    Many smaller improvements; the docs have been updated.
    
 -  0.6 - 0.6.2: Minor changes for Ocaml-3.03-alpha  (and later for 3.04). New 
@@ -402,7 +432,7 @@ List of Changes
    documentation under ocamlfind)
    Optional alternate directory layout: All META files go into  a separate 
    directory (see documentation under site-lib).
-   Findlib works now only for O'Caml 3; support for O'Caml 2 has been  dropped. 
+   Findlib works now only for OCaml 3; support for OCaml 2 has been  dropped. 
    As a consequence, the "configure" script could be  simplified; it is no 
    longer necessary to figure out the  linker options.
    Improved support for camlp4: New directives #camlp4o and  #camlp4r for the 
@@ -413,7 +443,7 @@ List of Changes
    is a one-file script that can be easily  distributed with any software. 
    ocamlfind-mini has reduced  functionality, but it is sufficient to compile 
    and install a  library. (But it does not support using a library.)
-   Support for the Cygwin port of O'Caml.
+   Support for the Cygwin port of OCaml.
    Installation of packages: The file permissions are  preserved when files are 
    installed. However, the umask is  applied. The "install" and "remove" 
    subcommands have better  diagnostics.
@@ -430,8 +460,8 @@ List of Changes
 -  0.4: Experimental support for camlp4 (see FAQ  section in the manual). New 
    environment variable  OCAMLFIND_COMMANDS (see ocamlfind(1)).  
    
--  0.3 - 0.3.1: Necessary updates for O'Caml 3. Bugfix: Findlib did not work 
-   for bytecode threads. The reason was that findlib added the directory of the 
+-  0.3 - 0.3.1: Necessary updates for OCaml 3. Bugfix: Findlib did not work for 
+   bytecode threads. The reason was that findlib added the directory of the 
    stdlib to the search path. Works now.  
    
 Older changes are no longer documented.

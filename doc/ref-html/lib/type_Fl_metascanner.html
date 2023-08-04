@@ -27,9 +27,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;pkg_defs&nbsp;:&nbsp;<span class="constructor">Fl_metascanner</span>.pkg_definition&nbsp;list;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;pkg_children&nbsp;:&nbsp;(string&nbsp;*&nbsp;<span class="constructor">Fl_metascanner</span>.pkg_expr)&nbsp;list;<br>
 &nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">exception</span>&nbsp;<span class="constructor">Error</span>&nbsp;<span class="keyword">of</span>&nbsp;string<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;parse&nbsp;:&nbsp;<span class="constructor">Stdlib</span>.in_channel&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Fl_metascanner</span>.pkg_expr<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;parse2&nbsp;:&nbsp;<span class="constructor">Stdlib</span>.in_channel&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Fl_metascanner</span>.pkg_expr<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;parse2_lexing&nbsp;:&nbsp;<span class="constructor">Stdlib</span>.<span class="constructor">Lexing</span>.lexbuf&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Fl_metascanner</span>.pkg_expr<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;parse_lexing&nbsp;:&nbsp;<span class="constructor">Stdlib</span>.<span class="constructor">Lexing</span>.lexbuf&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Fl_metascanner</span>.pkg_expr<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print_def&nbsp;:&nbsp;<span class="constructor">Stdlib</span>.out_channel&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Fl_metascanner</span>.pkg_definition&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
 &nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:&nbsp;<span class="constructor">Stdlib</span>.out_channel&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Fl_metascanner</span>.pkg_expr&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>

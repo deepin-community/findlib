@@ -45,7 +45,7 @@ index dc9b2b4..3027ce0 100644
          let found = ref false in
  	let lookup name default =
 diff --git a/src/findlib/findlib_config.mlp b/src/findlib/findlib_config.mlp
-index 64b4840..cf2fa86 100644
+index 3177de6..3b8664b 100644
 --- a/src/findlib/findlib_config.mlp
 +++ b/src/findlib/findlib_config.mlp
 @@ -4,6 +4,7 @@

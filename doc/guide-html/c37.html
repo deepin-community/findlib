@@ -120,13 +120,13 @@ as inheritage and dynamic method lookup.</P
 using libraries from a purely software-technical point of view. This
 means, we ignore how to make functions polymorphic, and how to create
 functors and classes. Instead, we only look at how to invoke the
-O'Caml compiler to create, manage, and use libraries. Especially, we
+OCaml compiler to create, manage, and use libraries. Especially, we
 are interested in the administration of systems of libraries that
 have dependencies.</P
 ><P
 >One of the complex operations on such a system is the replacement of 
 a library by a newer version. Because of the strict compatibility
-checks of O'Caml, it is usually necessary to rebuild and reinstall
+checks of OCaml, it is usually necessary to rebuild and reinstall
 all dependent libraries as well. With the help of findlib, one can
 find out which are the dependent libraries. (However, findlib does
 not provide a framework to rebuild them. For example, the GODI
